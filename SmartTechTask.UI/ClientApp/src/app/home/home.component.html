@@ -1,0 +1,24 @@
+<input type="search" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Photo</th>
+      <th>LastUpdated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of Products">
+      <td>{{product.Id}}</td>
+      <td>{{product.Name}}</td>
+      <td>{{product.Price}}</td>
+      <td><!--<img [src]="{{product.ImageUrl}}" />--></td>
+      <td>{{product.LastUpdated}}</td>
+      <td><button (click)='Eidt(product)'></button></td>
+      <td><a href="http://localhost:8170/api/product/Remove/{{product.Id}}">Remove</a></td>
+    </tr>
+  </tbody>
+</table>
