@@ -46,7 +46,7 @@ namespace SmartTechTask.API.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("Remove/{id}")]
         public IHttpActionResult Remove(int id)
         {
